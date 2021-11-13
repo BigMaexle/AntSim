@@ -19,6 +19,8 @@ function ent:init (game,x,y)
 
 
 
+
+
 end
 
 function ent:update (dt)
@@ -39,10 +41,12 @@ function ent:move ()
   local goal = self.r + self.dr
   local goalX = goal.x
   local goalY = goal.y
-  local actualX, actualY, cols, len = self.game.world:move(self, goalX, goalY)
+  local actualX, actualY, cols, len = self.game.world:move(self, goalX, goalY,self.playerFilter)
   self.r = vec(actualX,actualY)
   self.x = actualX
   self.y = actualY
+
+  return cols,len
 
 end
 

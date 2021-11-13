@@ -10,7 +10,7 @@ function love.load (args)
 end
 
 function love.update(dt)
-  -- body...
+  Timer.update(dt)
 end
 
 function love.draw (args)
