@@ -12,6 +12,7 @@ Peachy = require "lib/peachy"
 
 Entity = require "src/classes/entity"
 Ball = require "src/classes/ball"
+Coll = require "src/classes/collectable"
 dbt = require "lib/debug_tools"
 
 require "constants"

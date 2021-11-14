@@ -9,17 +9,21 @@ function free:update(ball,dt)
 
   local col,len = ball:move()
 
+
+
   --ball.dr = (ball.r-prev_r)
 
   resolved = false
-  print(#col)
   for _,c in pairs(col) do
+
+    if c.other.type == "coin" then
+      c.other:collect()
+    end
 
     --dbt:print_r (c.other.properties)
     --dbt:print_r(c.other.properties)
 
     if c.other.properties.hole then
-      print("won")
       if gs.current() == game then gs.push(won,game) end
     end
 

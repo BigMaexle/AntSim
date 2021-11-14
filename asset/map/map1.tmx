@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="32" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="5">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="32" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="44">
  <editorsettings>
   <export target="map1.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="map_tilesheet.tsx"/>
+ <tileset firstgid="257" source="collectable.tsx"/>
  <objectgroup id="3" name="base">
   <object id="1" name="player_spawn" x="26" y="148.333">
    <point/>
@@ -19,9 +20,9 @@
 53,4,4,4,4,4,4,4,36,1,1,1,1,53,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
 53,4,4,4,4,4,4,4,36,1,1,1,1,53,4,4,36,54,35,4,4,4,4,4,4,4,4,4,4,4,4,4,
 53,4,4,4,4,4,4,4,36,1,1,1,1,53,4,4,50,39,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
-53,4,4,4,4,4,4,4,36,1,1,1,1,53,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
-53,4,4,4,4,4,4,4,36,1,1,1,38,51,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
-54,37,37,98,101,101,101,3,55,1,1,38,51,4,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
+53,4,4,4,4,4,4,34,55,1,1,1,1,53,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
+53,4,4,4,4,4,4,36,1,1,1,1,38,51,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
+54,37,37,98,101,101,101,55,1,1,1,38,51,4,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
 1,1,1,1,1,1,1,1,1,1,1,53,4,4,4,4,4,36,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
 1,1,1,1,1,1,1,1,1,1,1,53,4,4,4,4,34,55,53,4,4,4,4,4,4,4,4,4,4,4,4,4,
 1,1,1,38,52,52,52,52,52,52,52,51,4,4,4,4,36,38,51,4,4,4,4,4,4,4,4,4,4,4,4,4,
@@ -29,4 +30,27 @@
 1,1,1,54,37,3,37,37,37,82,98,98,83,37,37,55,1,53,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 </data>
  </layer>
+ <objectgroup id="5" name="collectable">
+  <object id="23" gid="257" x="80" y="112" width="16" height="16"/>
+  <object id="24" gid="257" x="96.25" y="79" width="16" height="16"/>
+  <object id="25" gid="257" x="114.5" y="63" width="16" height="16"/>
+  <object id="26" gid="257" x="135.5" y="58.5" width="16" height="16"/>
+  <object id="27" gid="257" x="155.25" y="55.75" width="16" height="16"/>
+  <object id="28" gid="257" x="173.5" y="54.75" width="16" height="16"/>
+  <object id="29" gid="257" x="187.75" y="54.5" width="16" height="16"/>
+  <object id="30" gid="257" x="214.75" y="55.75" width="16" height="16"/>
+  <object id="31" gid="257" x="227" y="60.5" width="16" height="16"/>
+  <object id="32" gid="257" x="236" y="72.75" width="16" height="16"/>
+  <object id="33" gid="257" x="238.5" y="92" width="16" height="16"/>
+  <object id="34" gid="257" x="238.75" y="118" width="16" height="16"/>
+  <object id="35" gid="257" x="237.25" y="143" width="16" height="16"/>
+  <object id="36" gid="257" x="228" y="168.25" width="16" height="16"/>
+  <object id="37" gid="257" x="212.25" y="197.25" width="16" height="16"/>
+  <object id="38" gid="257" x="212.5" y="225" width="16" height="16"/>
+  <object id="39" gid="257" x="195.75" y="242.25" width="16" height="16"/>
+  <object id="40" gid="257" x="170.25" y="243.75" width="16" height="16"/>
+  <object id="41" gid="257" x="136" y="247.5" width="16" height="16"/>
+  <object id="42" gid="257" x="101" y="242.25" width="16" height="16"/>
+  <object id="43" gid="257" x="75.5" y="240.75" width="16" height="16"/>
+ </objectgroup>
 </map>

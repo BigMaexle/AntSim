@@ -8,27 +8,16 @@ function ent:init (game,x,y)
   self.dx = 0
   self.dy = 0
   self.dr = vec(self.dx,self.dy)
-  self.image = Peachy.new("asset/ball.json",nil,"Spin")
-
-  self.image:setFrameDuration("Spin",50)
-
-  self.w = self.image._jsonData.frames[1].spriteSourceSize.w
-  self.h = self.image._jsonData.frames[1].spriteSourceSize.h
-
-  self.game.world:add(self,x,y,self.w,self.h)
-
-
-
-
-
 end
 
 function ent:update (dt)
   self.image:update(dt)
 end
 
-function ent:draw (args)
-  self.image:draw(self.x,self.y)
+function ent:draw (x,y)
+  local x = x or self.x
+  local y = y or self.y
+  self.image:draw(x,y)
 end
 
 function ent:applyGravity (dt)

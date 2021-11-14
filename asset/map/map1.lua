@@ -8,8 +8,8 @@ return {
   height = 16,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 5,
-  nextobjectid = 5,
+  nextlayerid = 6,
+  nextobjectid = 44,
   properties = {},
   tilesets = {
     {
@@ -449,6 +449,63 @@ return {
           }
         }
       }
+    },
+    {
+      name = "collectable",
+      firstgid = 257,
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      columns = 6,
+      image = "../collectible.png",
+      imagewidth = 96,
+      imageheight = 16,
+      objectalignment = "unspecified",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 16
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 6,
+      tiles = {
+        {
+          id = 0,
+          type = "coin",
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 1,
+          type = "coin",
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 2,
+          type = "speed"
+        },
+        {
+          id = 3,
+          type = "speed"
+        },
+        {
+          id = 4,
+          type = "speed"
+        },
+        {
+          id = 5,
+          type = "speed"
+        }
+      }
     }
   },
   layers = {
@@ -505,14 +562,365 @@ return {
         53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 36, 54, 35, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 50, 39, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 38, 51, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        54, 37, 37, 98, 101, 101, 101, 3, 55, 1, 1, 38, 51, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        53, 4, 4, 4, 4, 4, 4, 34, 55, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        53, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 38, 51, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        54, 37, 37, 98, 101, 101, 101, 55, 1, 1, 1, 38, 51, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 34, 55, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         1, 1, 1, 38, 52, 52, 52, 52, 52, 52, 52, 51, 4, 4, 4, 4, 36, 38, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 34, 55, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
         1, 1, 1, 54, 37, 3, 37, 37, 37, 82, 98, 98, 83, 37, 37, 55, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "collectable",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 23,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 80,
+          y = 112,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 24,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 96.25,
+          y = 79,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 25,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 114.5,
+          y = 63,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 26,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 135.5,
+          y = 58.5,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 27,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 155.25,
+          y = 55.75,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 28,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 173.5,
+          y = 54.75,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 29,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 187.75,
+          y = 54.5,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 30,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 214.75,
+          y = 55.75,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 31,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 227,
+          y = 60.5,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 32,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 236,
+          y = 72.75,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 33,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 238.5,
+          y = 92,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 34,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 238.75,
+          y = 118,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 35,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 237.25,
+          y = 143,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 36,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 228,
+          y = 168.25,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 37,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 212.25,
+          y = 197.25,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 38,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 212.5,
+          y = 225,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 39,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 195.75,
+          y = 242.25,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 40,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 170.25,
+          y = 243.75,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 41,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 136,
+          y = 247.5,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 42,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 101,
+          y = 242.25,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        },
+        {
+          id = 43,
+          name = "",
+          type = "coin",
+          shape = "rectangle",
+          x = 75.5,
+          y = 240.75,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 257,
+          visible = true,
+          properties = {
+            ["filter"] = "cross"
+          }
+        }
       }
     }
   }

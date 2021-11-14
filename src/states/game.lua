@@ -34,6 +34,13 @@ function game:init (args)
     end
   end
 
+  self.map.collectables = {}
+  --collectables
+  for _,c in pairs(self.map.layers.collectable.objects) do
+    table.insert(self.map.collectables,Coll(self,c))
+  end
+  self.map:removeLayer("collectable")
+
   self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
 
  --dbt:print_r(self.map.layers.base.objects)
@@ -67,6 +74,13 @@ end
 
 function game:update (dt)
 
+
+  for k,c in pairs(self.map.collectables) do
+    c:update(dt)
+    if c.delete then
+      table.remove(self.map.collectables,k)
+    end
+  end
   self.ball:update(dt)
 
   self:camera_update(self.cam,dt)
@@ -80,7 +94,9 @@ function game:draw (args)
 
 
   self.map:draw(self.map.tx,self.map.ty,self.cam.scale,self.cam.scale)
-
+  for _,c in pairs(self.map.collectables) do
+    c:draw()
+  end
   --self.map:draw()
   --self.map:bump_draw()
 

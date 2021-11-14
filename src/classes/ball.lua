@@ -5,7 +5,13 @@ local ball = Class{__includes = Entity}
 function ball:init (game,x,y)
   Entity.init(self,game,x,y)
 
-  print(self.w)
+  self.image = Peachy.new("asset/ball.json",nil,"Spin")
+
+  self.image:setFrameDuration("Spin",50)
+
+  self.w = self.image._jsonData.frames[1].spriteSourceSize.w
+  self.h = self.image._jsonData.frames[1].spriteSourceSize.h
+  self.game.world:add(self,x,y,self.w,self.h)
 
   self.ready_to_shoot = true
 
@@ -27,6 +33,8 @@ function ball:init (game,x,y)
   self.playerFilter = function(item, other)
     return other.properties.filter
   end
+
+
 
 end
 
