@@ -11,8 +11,24 @@
    <property name="filter" value="cross"/>
   </properties>
  </tile>
- <tile id="2" type="speed"/>
- <tile id="3" type="speed"/>
- <tile id="4" type="speed"/>
- <tile id="5" type="speed"/>
+ <tile id="2" type="speed">
+  <properties>
+   <property name="filter" value="cross"/>
+  </properties>
+ </tile>
+ <tile id="3" type="speed">
+  <properties>
+   <property name="filter" value="cross"/>
+  </properties>
+ </tile>
+ <tile id="4" type="speed">
+  <properties>
+   <property name="filter" value="cross"/>
+  </properties>
+ </tile>
+ <tile id="5" type="speed">
+  <properties>
+   <property name="filter" value="cross"/>
+  </properties>
+ </tile>
 </tileset>

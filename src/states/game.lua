@@ -6,9 +6,11 @@ function game:init (args)
 
   self.cam = cam(0,0)
   self.cam.scale = 3
+  self.cam.r = 0
 
   self.world = bump.newWorld(32)
   self.map = 	sti("asset/map/map1.lua",{"bump"})
+  self.shaking = false
 
   self.map:bump_init(self.world)
 
@@ -47,10 +49,20 @@ function game:init (args)
  for _,o in pairs (self.map.layers.base.objects) do
   if o.name == "player_spawn" then self.ball = Ball(self,o.x,o.y) end
  end
+
+ self.score = 0
+ self.time = 0
+ self.sin = 0
+
+ Timer.every(0.05,function ()
+   self.sin = math.sin(self.time*7)
+ end)
+
 end
 
 function game:enter (args)
-  -- body...
+
+
 end
 
 function game:keypressed(key, scancode, isrepeat)
@@ -74,6 +86,10 @@ end
 
 function game:update (dt)
 
+  self.time = self.time + dt
+  if self.time > 2*math.pi then
+    self.time = 0
+  end
 
   for k,c in pairs(self.map.collectables) do
     c:update(dt)
@@ -107,13 +123,28 @@ function game:draw (args)
 
   self.cam:detach()
 
-  ---DEBUg----
+  ---DEBUG----
     local width, height, flags = love.window.getMode( )
   love.graphics.print(self.cam.x,0,10)
   --love.graphics.print(self.cam.x -width/self.cam.scale/2,20,10)
   love.graphics.print(self.cam.y,0,20)
   love.graphics.print(self.ball.frame_duration,0,30)
+  love.graphics.print(self.score .. "   On ground?:  " .. tostring(self.ball.on_ground),0,40 )
+  love.graphics.print(self.cols,0,50)
 
+
+end
+
+function game:applyshake (args)
+  if self.shaking == false then
+    self.shaking = true
+    Timer.tween (0.2,self.cam,{["scale"] = 2.9},"in-elastic",
+    function ()
+        Timer.tween (0.2,self.cam,{["scale"] = 3},"out-elastic",function ()
+          self.shaking = false
+        end)
+    end)
+  end
 end
 
 function game:camera_update(cam,dt)

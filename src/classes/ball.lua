@@ -20,11 +20,14 @@ function ball:init (game,x,y)
 
   self.strength = 6
   self.current_state = "free"
+  self.on_ground = false
 
   self.states = {
     free = require "src/classes/ballstate/free",
     aiming = require "src/classes/ballstate/aiming",
   }
+
+  self.bounce_sound = love.audio.newSource("sfx/bounce.wav", "static")
 
   self.frame_duration = 100
 
@@ -75,7 +78,7 @@ function ball:calculate_frameduration (args)
   if self.on_ground then
        self.frame_duration = 20 / self.dr:len2()
        self.frame_duration = math.max(10, self.frame_duration)
-       self.frame_duration = math.min(400, self.frame_duration)
+       self.frame_duration = math.min(800, self.frame_duration)
   else
     --self.frame_duration = 100
   end

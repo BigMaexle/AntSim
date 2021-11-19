@@ -60,7 +60,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -69,7 +69,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -78,7 +78,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -87,7 +87,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -96,7 +96,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -105,7 +105,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -114,7 +114,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -123,7 +123,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -132,7 +132,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -141,7 +141,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -150,7 +150,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
@@ -159,34 +159,34 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.95"/>
+   <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
  </tile>
  <tile id="81" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.5"/>
+   <property name="bounce_res" type="float" value="0.2"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.9"/>
+   <property name="roll_res" type="float" value="0.2"/>
    <property name="type" value="water"/>
   </properties>
  </tile>
  <tile id="82" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.5"/>
+   <property name="bounce_res" type="float" value="0.2"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.9"/>
+   <property name="roll_res" type="float" value="0.2"/>
    <property name="type" value="water"/>
   </properties>
  </tile>
  <tile id="97" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.5"/>
+   <property name="bounce_res" type="float" value="0.2"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.5"/>
+   <property name="roll_res" type="float" value="0.2"/>
    <property name="type" value="water"/>
   </properties>
  </tile>
@@ -195,7 +195,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.6"/>
+   <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
@@ -204,7 +204,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.6"/>
+   <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
@@ -213,7 +213,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.6"/>
+   <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
@@ -222,7 +222,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.6"/>
+   <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
@@ -231,7 +231,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
-   <property name="roll_res" type="float" value="0.6"/>
+   <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>

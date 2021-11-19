@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 6,
-  nextobjectid = 44,
+  nextobjectid = 51,
   properties = {},
   tilesets = {
     {
@@ -235,7 +235,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -246,7 +246,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -257,7 +257,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -268,7 +268,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -279,7 +279,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -290,7 +290,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -301,7 +301,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -312,7 +312,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -323,7 +323,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -334,7 +334,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -345,7 +345,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -356,7 +356,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.95,
+            ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
         },
@@ -364,10 +364,10 @@ return {
           id = 81,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.9,
+            ["roll_res"] = 0.2,
             ["type"] = "water"
           }
         },
@@ -375,10 +375,10 @@ return {
           id = 82,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.9,
+            ["roll_res"] = 0.2,
             ["type"] = "water"
           }
         },
@@ -386,10 +386,10 @@ return {
           id = 97,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.5,
+            ["roll_res"] = 0.2,
             ["type"] = "water"
           }
         },
@@ -397,10 +397,10 @@ return {
           id = 98,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.5,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.6,
+            ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
         },
@@ -408,10 +408,10 @@ return {
           id = 99,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.5,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.6,
+            ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
         },
@@ -419,10 +419,10 @@ return {
           id = 100,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.5,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.6,
+            ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
         },
@@ -430,10 +430,10 @@ return {
           id = 101,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.5,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.6,
+            ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
         },
@@ -441,10 +441,10 @@ return {
           id = 102,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.5,
             ["collidable"] = true,
             ["filter"] = "bounce",
-            ["roll_res"] = 0.6,
+            ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
         }
@@ -491,19 +491,31 @@ return {
         },
         {
           id = 2,
-          type = "speed"
+          type = "speed",
+          properties = {
+            ["filter"] = "cross"
+          }
         },
         {
           id = 3,
-          type = "speed"
+          type = "speed",
+          properties = {
+            ["filter"] = "cross"
+          }
         },
         {
           id = 4,
-          type = "speed"
+          type = "speed",
+          properties = {
+            ["filter"] = "cross"
+          }
         },
         {
           id = 5,
-          type = "speed"
+          type = "speed",
+          properties = {
+            ["filter"] = "cross"
+          }
         }
       }
     }
@@ -554,22 +566,22 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        38, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 39, 54, 35, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 50, 39, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 34, 102, 101, 101, 103, 35, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 36, 54, 35, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 50, 39, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 34, 55, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        53, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 38, 51, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        54, 37, 37, 98, 101, 101, 101, 55, 1, 1, 1, 38, 51, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 34, 55, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        1, 1, 1, 38, 52, 52, 52, 52, 52, 52, 52, 51, 4, 4, 4, 4, 36, 38, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 34, 55, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        1, 1, 1, 54, 37, 3, 37, 37, 37, 82, 98, 98, 83, 37, 37, 55, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+        38, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 39, 54,
+        53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 50, 39,
+        53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 4, 34, 102, 101, 101, 103, 35, 4, 4, 4, 34, 35, 4, 4, 4, 4, 4, 4, 34, 35, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 50, 51, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 34, 55, 1, 1, 1, 1, 53, 4, 4, 4, 50, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 38, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        54, 37, 37, 98, 101, 101, 101, 55, 1, 1, 1, 38, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        1, 1, 1, 38, 52, 52, 52, 52, 52, 52, 52, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 34, 55,
+        1, 1, 1, 54, 37, 3, 37, 37, 37, 82, 98, 98, 98, 98, 98, 98, 98, 98, 100, 100, 100, 100, 100, 100, 100, 100, 100, 37, 37, 37, 55, 38
       }
     },
     {
@@ -746,176 +758,112 @@ return {
           }
         },
         {
-          id = 33,
+          id = 44,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 238.5,
-          y = 92,
+          x = 199.75,
+          y = 55,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"
           }
         },
         {
-          id = 34,
+          id = 45,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 238.75,
-          y = 118,
+          x = 93.5,
+          y = 47.25,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"
           }
         },
         {
-          id = 35,
+          id = 46,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 237.25,
-          y = 143,
+          x = 77,
+          y = 72,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"
           }
         },
         {
-          id = 36,
+          id = 47,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 228,
-          y = 168.25,
+          x = 64,
+          y = 96,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"
           }
         },
         {
-          id = 37,
+          id = 48,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 212.25,
-          y = 197.25,
+          x = 63.5,
+          y = 131.25,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"
           }
         },
         {
-          id = 38,
+          id = 49,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 212.5,
-          y = 225,
+          x = 84.75,
+          y = 133.75,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"
           }
         },
         {
-          id = 39,
+          id = 50,
           name = "",
-          type = "coin",
+          type = "speed",
           shape = "rectangle",
-          x = 195.75,
-          y = 242.25,
+          x = 92,
+          y = 112.25,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 257,
-          visible = true,
-          properties = {
-            ["filter"] = "cross"
-          }
-        },
-        {
-          id = 40,
-          name = "",
-          type = "coin",
-          shape = "rectangle",
-          x = 170.25,
-          y = 243.75,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 257,
-          visible = true,
-          properties = {
-            ["filter"] = "cross"
-          }
-        },
-        {
-          id = 41,
-          name = "",
-          type = "coin",
-          shape = "rectangle",
-          x = 136,
-          y = 247.5,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 257,
-          visible = true,
-          properties = {
-            ["filter"] = "cross"
-          }
-        },
-        {
-          id = 42,
-          name = "",
-          type = "coin",
-          shape = "rectangle",
-          x = 101,
-          y = 242.25,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 257,
-          visible = true,
-          properties = {
-            ["filter"] = "cross"
-          }
-        },
-        {
-          id = 43,
-          name = "",
-          type = "coin",
-          shape = "rectangle",
-          x = 75.5,
-          y = 240.75,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 257,
+          gid = 259,
           visible = true,
           properties = {
             ["filter"] = "cross"

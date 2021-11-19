@@ -5,7 +5,17 @@ WIN_W,WIN_H,WIN_F = love.window.getMode()
 
 GRAVITY = 10
 
-COIN_HEIGHT = 8
-COIN_WIDHT = 6
+SPEED_BOOST = 2
 
-COIN_SOUND = love.audio.newSource("sfx/coin.wav", "static")
+ITEM = {}
+
+ITEM["coin"] = {}
+ITEM["coin"].height = 8
+ITEM["coin"].width = 8
+ITEM["coin"].sound = love.audio.newSource("sfx/coin.wav", "static")
+
+
+ITEM["speed"] = {}
+ITEM["speed"].height = 7
+ITEM["speed"].width = 8
+ITEM["speed"].sound = love.audio.newSource("sfx/speed.wav", "static")

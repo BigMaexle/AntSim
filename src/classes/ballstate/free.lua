@@ -1,22 +1,25 @@
 local free = {}
 
+function free:init (args)
+  self.roll_res = 0
+end
+
 function free:update(ball,dt)
 
   local prev_r = ball.r
-  ball.on_ground = false
 
   ball:applyGravity(dt)
 
   local col,len = ball:move()
 
+  ball.game.cols = len
 
 
   --ball.dr = (ball.r-prev_r)
 
-  resolved = false
   for _,c in pairs(col) do
 
-    if c.other.type == "coin" then
+    if c.other.type == "coin" or c.other.type == "speed" then
       c.other:collect()
     end
 
@@ -28,15 +31,16 @@ function free:update(ball,dt)
     end
 
     if c.other.properties.filter == 'bounce' then
+      if ball.dr:len2() > 1 and not ball.on_ground then ball.bounce_sound:play() end
       if c.normal.y == -1 then
-        if math.abs(ball.dr.y) < 0.2 then
-          ball.dr.y = 0
-          ball.on_ground = true
-        end
         ball.dr.y = ball.dr.y *(-1)
         ball.dr.y = ball.dr.y *c.other.properties.bounce_res
-        ball.dr.x = ball.dr.x *c.other.properties.roll_res
-        --ball.dr = ball.dr * 0.95
+        ball.dr.x = ball.dr.x *math.pow(0.9,dt)
+        if math.abs(ball.dr.y) < 0.2 then
+          ball.dr.y = 0
+          ball.on_ground  = true
+          self.roll_res = c.other.properties.roll_res
+        end
       end
 
       if c.normal.y == 1 then
@@ -51,16 +55,21 @@ function free:update(ball,dt)
     end
 
 
+
+
   end
 
   if ball.on_ground then
-    ball.dr.x = ball.dr.x*0.9
+    ball.dr.x = ball.dr.x * math.pow(self.roll_res,dt)
+  end
+
+  if math.abs(ball.dr.y) > 0.2 then
+    ball.on_ground = false
   end
 
   if ball.dr:len2 () < 0.1 and ball.on_ground then
     --self.dr = vec(0,0)
     ball.ready_to_shoot = true
-    ball.image:stop()
   end
 
 
