@@ -31,7 +31,10 @@ function free:update(ball,dt)
     end
 
     if c.other.properties.filter == 'bounce' then
-      if ball.dr:len2() > 1 and not ball.on_ground then ball.bounce_sound:play() end
+      if ball.dr:len2() > 1 and not ball.on_ground then
+        ball.bounce_sound:play()
+        if c.other.properties.particle ~= nil then ball.psystem:emit(c,8,ball.dr) end
+      end
       if c.normal.y == -1 then
         ball.dr.y = ball.dr.y *(-1)
         ball.dr.y = ball.dr.y *c.other.properties.bounce_res
@@ -40,6 +43,7 @@ function free:update(ball,dt)
           ball.dr.y = 0
           ball.on_ground  = true
           self.roll_res = c.other.properties.roll_res
+          self.roll_ground = c.other.properties.particle
         end
       end
 
@@ -61,10 +65,12 @@ function free:update(ball,dt)
 
   if ball.on_ground then
     ball.dr.x = ball.dr.x * math.pow(self.roll_res,dt)
+    --ball.psystem:rolling_update(ball.dr.x,self.roll_ground)
   end
 
   if math.abs(ball.dr.y) > 0.2 then
     ball.on_ground = false
+    --ball.psystem.ps:setEmissionRate(0)
   end
 
   if ball.dr:len2 () < 0.1 and ball.on_ground then

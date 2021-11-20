@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.5" tiledversion="1.7.2" name="map_tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
+<tileset version="1.5" tiledversion="1.6.0" name="map_tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
  <editorsettings>
   <export target="map_tilesheet..tsx" format="tsx"/>
  </editorsettings>
@@ -60,6 +60,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -69,6 +70,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -78,6 +80,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -87,6 +90,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -96,6 +100,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -105,6 +110,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -114,6 +120,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -123,6 +130,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -132,6 +140,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -141,6 +150,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -150,6 +160,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -159,6 +170,7 @@
    <property name="bounce_res" type="float" value="0.8"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="block"/>
    <property name="roll_res" type="float" value="0.8"/>
    <property name="type" value="wall"/>
   </properties>
@@ -168,6 +180,7 @@
    <property name="bounce_res" type="float" value="0.2"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="water"/>
    <property name="roll_res" type="float" value="0.2"/>
    <property name="type" value="water"/>
   </properties>
@@ -177,6 +190,7 @@
    <property name="bounce_res" type="float" value="0.2"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="water"/>
    <property name="roll_res" type="float" value="0.2"/>
    <property name="type" value="water"/>
   </properties>
@@ -186,6 +200,7 @@
    <property name="bounce_res" type="float" value="0.2"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="water"/>
    <property name="roll_res" type="float" value="0.2"/>
    <property name="type" value="water"/>
   </properties>
@@ -195,6 +210,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="grass"/>
    <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
@@ -204,6 +220,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="grass"/>
    <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
@@ -213,6 +230,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="grass"/>
    <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
@@ -222,6 +240,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="grass"/>
    <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>
@@ -231,6 +250,7 @@
    <property name="bounce_res" type="float" value="0.7"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
+   <property name="particle" value="grass"/>
    <property name="roll_res" type="float" value="0.5"/>
    <property name="type" value="grass"/>
   </properties>

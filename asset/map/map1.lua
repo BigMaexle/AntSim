@@ -1,7 +1,7 @@
 return {
   version = "1.5",
   luaversion = "5.1",
-  tiledversion = "1.7.2",
+  tiledversion = "1.6.0",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 32,
@@ -235,6 +235,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -246,6 +247,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -257,6 +259,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -268,6 +271,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -279,6 +283,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -290,6 +295,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -301,6 +307,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -312,6 +319,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -323,6 +331,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -334,6 +343,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -345,6 +355,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -356,6 +367,7 @@ return {
             ["bounce_res"] = 0.8,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "block",
             ["roll_res"] = 0.8,
             ["type"] = "wall"
           }
@@ -367,6 +379,7 @@ return {
             ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "water",
             ["roll_res"] = 0.2,
             ["type"] = "water"
           }
@@ -378,6 +391,7 @@ return {
             ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "water",
             ["roll_res"] = 0.2,
             ["type"] = "water"
           }
@@ -389,6 +403,7 @@ return {
             ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "water",
             ["roll_res"] = 0.2,
             ["type"] = "water"
           }
@@ -397,9 +412,10 @@ return {
           id = 98,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.7,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "grass",
             ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
@@ -408,9 +424,10 @@ return {
           id = 99,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.7,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "grass",
             ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
@@ -419,9 +436,10 @@ return {
           id = 100,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.7,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "grass",
             ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
@@ -430,9 +448,10 @@ return {
           id = 101,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.7,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "grass",
             ["roll_res"] = 0.5,
             ["type"] = "grass"
           }
@@ -441,9 +460,10 @@ return {
           id = 102,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.5,
+            ["bounce_res"] = 0.7,
             ["collidable"] = true,
             ["filter"] = "bounce",
+            ["particle"] = "grass",
             ["roll_res"] = 0.5,
             ["type"] = "grass"
           }

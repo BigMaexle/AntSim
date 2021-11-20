@@ -37,6 +37,9 @@ function ball:init (game,x,y)
     return other.properties.filter
   end
 
+  self.psystem = require "src/classes/psystem"
+  self.psystem:init(self)
+
 
 
 end
@@ -70,6 +73,7 @@ function ball:update (dt)
   Entity.update(self,dt)
 
   self.states[self.current_state]:update(self,dt)
+  self.psystem:update(dt)
 
 end
 
@@ -92,6 +96,7 @@ end
 function ball:draw (args)
 
     self.states[self.current_state]:draw(self)
+    self.psystem:draw()
 
 end
 
