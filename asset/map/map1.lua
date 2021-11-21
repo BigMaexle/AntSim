@@ -3,13 +3,13 @@ return {
   luaversion = "5.1",
   tiledversion = "1.6.0",
   orientation = "orthogonal",
-  renderorder = "right-down",
+  renderorder = "right-up",
   width = 32,
   height = 16,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 6,
-  nextobjectid = 51,
+  nextlayerid = 7,
+  nextobjectid = 55,
   properties = {},
   tilesets = {
     {
@@ -376,11 +376,11 @@ return {
           id = 81,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.2,
+            ["bounce_res"] = 0.1,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "water",
-            ["roll_res"] = 0.2,
+            ["roll_res"] = 0.05,
             ["type"] = "water"
           }
         },
@@ -388,11 +388,11 @@ return {
           id = 82,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.2,
+            ["bounce_res"] = 0.1,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "water",
-            ["roll_res"] = 0.2,
+            ["roll_res"] = 0.05,
             ["type"] = "water"
           }
         },
@@ -400,11 +400,11 @@ return {
           id = 97,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.2,
+            ["bounce_res"] = 0.1,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "water",
-            ["roll_res"] = 0.2,
+            ["roll_res"] = 0.05,
             ["type"] = "water"
           }
         },
@@ -412,11 +412,11 @@ return {
           id = 98,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "grass",
-            ["roll_res"] = 0.5,
+            ["roll_res"] = 0.3,
             ["type"] = "grass"
           }
         },
@@ -424,11 +424,11 @@ return {
           id = 99,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "grass",
-            ["roll_res"] = 0.5,
+            ["roll_res"] = 0.3,
             ["type"] = "grass"
           }
         },
@@ -436,11 +436,11 @@ return {
           id = 100,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "grass",
-            ["roll_res"] = 0.5,
+            ["roll_res"] = 0.3,
             ["type"] = "grass"
           }
         },
@@ -448,11 +448,11 @@ return {
           id = 101,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "grass",
-            ["roll_res"] = 0.5,
+            ["roll_res"] = 0.3,
             ["type"] = "grass"
           }
         },
@@ -460,11 +460,11 @@ return {
           id = 102,
           type = "wall",
           properties = {
-            ["bounce_res"] = 0.7,
+            ["bounce_res"] = 0.2,
             ["collidable"] = true,
             ["filter"] = "bounce",
             ["particle"] = "grass",
-            ["roll_res"] = 0.5,
+            ["roll_res"] = 0.3,
             ["type"] = "grass"
           }
         }
@@ -538,6 +538,54 @@ return {
           }
         }
       }
+    },
+    {
+      name = "flag",
+      firstgid = 263,
+      tilewidth = 16,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 5,
+      image = "../flag.png",
+      imagewidth = 80,
+      imageheight = 32,
+      objectalignment = "unspecified",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 5,
+      tiles = {
+        {
+          id = 4,
+          animation = {
+            {
+              tileid = 1,
+              duration = 200
+            },
+            {
+              tileid = 2,
+              duration = 200
+            },
+            {
+              tileid = 3,
+              duration = 200
+            },
+            {
+              tileid = 4,
+              duration = 200
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -564,7 +612,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          visible = true,
+          visible = false,
           properties = {}
         }
       }
@@ -592,7 +640,7 @@ return {
         53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
         53, 4, 4, 4, 4, 4, 4, 4, 34, 102, 101, 101, 103, 35, 4, 4, 4, 34, 35, 4, 4, 4, 4, 4, 4, 34, 35, 4, 4, 4, 4, 36,
         53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 50, 51, 4, 4, 4, 4, 36,
-        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
+        53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 3, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
         53, 4, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 53, 4, 4, 4, 36, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
         53, 4, 4, 4, 4, 4, 4, 34, 55, 1, 1, 1, 1, 53, 4, 4, 4, 50, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
         53, 4, 4, 4, 4, 4, 4, 36, 1, 1, 1, 1, 38, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
@@ -601,7 +649,36 @@ return {
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
         1, 1, 1, 38, 52, 52, 52, 52, 52, 52, 52, 51, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 36,
         1, 1, 1, 53, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 34, 55,
-        1, 1, 1, 54, 37, 3, 37, 37, 37, 82, 98, 98, 98, 98, 98, 98, 98, 98, 100, 100, 100, 100, 100, 100, 100, 100, 100, 37, 37, 37, 55, 38
+        1, 1, 1, 54, 37, 37, 37, 37, 37, 82, 98, 98, 98, 98, 98, 98, 98, 98, 100, 100, 100, 100, 100, 100, 100, 100, 100, 37, 37, 37, 55, 38
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "decoration",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 54,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 64,
+          y = 160,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 267,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {

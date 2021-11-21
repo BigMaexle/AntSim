@@ -26,6 +26,7 @@ function ball:init (game,x,y)
     free = require "src/classes/ballstate/free",
     aiming = require "src/classes/ballstate/aiming",
   }
+  self.states["aiming"]:init()
 
   self.bounce_sound = love.audio.newSource("sfx/bounce.wav", "static")
 
@@ -50,7 +51,7 @@ function ball:shoot (args)
   self.image:togglePlay()
   self.ready_to_shoot = false
 
-  self.dr = vec.fromPolar(self.angle,self.strength)
+  self.dr = vec.fromPolar(self.angle,self.states["aiming"].str/NORMAL_FACTOR)
 
   self.frame_duration = 20
   self.image:play()
@@ -59,10 +60,12 @@ end
 
 function ball:onSpace (type)
   if self.ready_to_shoot and type == "press" then
+    self.states["aiming"]:enter()
     self.current_state = "aiming"
     self.angle = math.pi * 3/2
   end
   if self.current_state == "aiming" and type == "release" then
+    self.states["aiming"]:leave()
     self.current_state = "free"
     self:shoot()
   end

@@ -38,7 +38,7 @@ function free:update(ball,dt)
       if c.normal.y == -1 then
         ball.dr.y = ball.dr.y *(-1)
         ball.dr.y = ball.dr.y *c.other.properties.bounce_res
-        ball.dr.x = ball.dr.x *math.pow(0.9,dt)
+        ball.dr.x = ball.dr.x *c.other.properties.roll_res
         if math.abs(ball.dr.y) < 0.2 then
           ball.dr.y = 0
           ball.on_ground  = true
