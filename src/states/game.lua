@@ -8,11 +8,12 @@ function game:init (args)
   self.cam.scale = 3
   self.cam.r = 0
 
-  self.world = bump.newWorld(32)
-  self.map = 	sti("asset/map/map1.lua",{"bump"})
+  self.world = love.physics.newWorld(0,1,true)
+  self.world:setCallbacks(beginContact, endContact, preSolve, postSolve)
+  self.map = 	sti("asset/map/map1.lua",{"box2d"})
   self.shaking = false
 
-  self.map:bump_init(self.world)
+  self.map:box2d_init(self.world)
 
   --find hole
   for x,i in pairs(self.map.layers.level_base1.data) do
@@ -43,7 +44,7 @@ function game:init (args)
   end
   self.map:removeLayer("collectable")
 
-  self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
+  --self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
 
  --dbt:print_r(self.map.layers.base.objects)
  for _,o in pairs (self.map.layers.base.objects) do
@@ -99,6 +100,8 @@ function game:update (dt)
   end
   self.ball:update(dt)
 
+  self.world:update(dt)
+
   self:camera_update(self.cam,dt)
 
 end
@@ -129,8 +132,6 @@ function game:draw (args)
   --love.graphics.print(self.cam.x -width/self.cam.scale/2,20,10)
   love.graphics.print(self.cam.y,0,20)
   love.graphics.print(self.ball.frame_duration,0,30)
-  love.graphics.print(self.score .. "   On ground?:  " .. tostring(self.ball.on_ground),0,40 )
-  love.graphics.print(self.cols,0,50)
 
 
 end

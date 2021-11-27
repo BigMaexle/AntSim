@@ -11,7 +11,11 @@ function ball:init (game,x,y)
 
   self.w = self.image._jsonData.frames[1].spriteSourceSize.w
   self.h = self.image._jsonData.frames[1].spriteSourceSize.h
-  self.game.world:add(self,x,y,self.w,self.h)
+
+  self.body = love.physics.newBody (self.game.world,self.x,self.y,"dynamic")
+  self.body:setAngle(0)
+  self.shape = love.physics.newCircleShape(4)
+  self.fixture = love.physics.newFixture(self.body,self.shape)
 
   self.ready_to_shoot = true
 

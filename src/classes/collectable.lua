@@ -20,7 +20,10 @@ function coll:init (game,item)
   --move it 1 Tile higher (TILED WORKAROUND)
   self.y = self.y - self.h
 
-  self.game.world:add(self,self.x,self.y,self.w,self.h)
+  self.body = love.physics.newBody (self.game.world,self.x,self.y,"dynamic")
+  self.body:setAngle(0)
+  self.shape = love.physics.newRectangleShape(2,2)
+  self.fixture = love.physics.newFixture(self.body,self.shape)
 
   self.anim_y = self.y
 
@@ -33,7 +36,7 @@ function coll:update (dt)
 
   if self.collected == false then
     self.anim_y = self.y + 3* self.game.sin
-    self.game.world:update(self,self.x,self.anim_y)
+    --self.game.world:update(self,self.x,self.anim_y)
   end
 
   if self.collected then
