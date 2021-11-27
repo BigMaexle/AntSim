@@ -800,7 +800,7 @@ function Map:update(dt)
 			if update and self.tileInstances[tile.gid] then
 				for _, j in pairs(self.tileInstances[tile.gid]) do
 					local t = self.tiles[tonumber(tile.animation[tile.frame].tileid) + self.tilesets[tile.tileset].firstgid]
-					j.batch:set(j.id, t.quad, j.x, j.y, j.r, tile.sx, tile.sy, 0, j.oy)
+					j.batch:set(j.id, t.quad, j.x, j.y, j.r, tile.sx, tile.sy, 0, 0)
 				end
 			end
 		end

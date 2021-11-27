@@ -7,11 +7,28 @@ function game:init (args)
   self.cam = cam(0,0)
   self.cam.scale = 3
   self.cam.r = 0
+  self.shaking = false
 
+  self:loadlevel("asset/map/map2.lua")
+
+ Timer.every(0.05,function ()
+   self.sin = math.sin(self.time*7)
+ end)
+
+end
+
+function game:loadlevel (filename)
+
+<<<<<<< HEAD
   self.world = love.physics.newWorld(0,1,true)
   self.world:setCallbacks(beginContact, endContact, preSolve, postSolve)
   self.map = 	sti("asset/map/map1.lua",{"box2d"})
   self.shaking = false
+=======
+  self.world = bump.newWorld(32)
+  self.map = 	sti(filename,{"bump"})
+
+>>>>>>> d8458875d38fed176bca052de981f3734ebee9c9
 
   self.map:box2d_init(self.world)
 
@@ -21,7 +38,7 @@ function game:init (args)
       if j.type == "hole" then
         for _,r in pairs(j.objectGroup.objects) do
           if r.properties.hole then
-          	 --dbt:print_r(r)
+             --dbt:print_r(r)
              self.hole = {
                y = (x-1)*16 + r.y,
                x = (y-1)*16 + r.x,
@@ -44,7 +61,19 @@ function game:init (args)
   end
   self.map:removeLayer("collectable")
 
+<<<<<<< HEAD
   --self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
+=======
+  ---particle emmission for flames
+  self.flames = {}
+  for k,o in pairs(self.map.layers.deco.objects) do
+    if o.type == "flame" then
+      self.flames[k] = Flame(self,o.x,o.y)
+    end
+  end
+
+  self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
+>>>>>>> d8458875d38fed176bca052de981f3734ebee9c9
 
  --dbt:print_r(self.map.layers.base.objects)
  for _,o in pairs (self.map.layers.base.objects) do
@@ -54,11 +83,6 @@ function game:init (args)
  self.score = 0
  self.time = 0
  self.sin = 0
-
- Timer.every(0.05,function ()
-   self.sin = math.sin(self.time*7)
- end)
-
 end
 
 function game:enter (args)
@@ -87,6 +111,8 @@ end
 
 function game:update (dt)
 
+  self.map:update(dt)
+
   self.time = self.time + dt
   if self.time > 2*math.pi then
     self.time = 0
@@ -98,6 +124,11 @@ function game:update (dt)
       table.remove(self.map.collectables,k)
     end
   end
+
+  for _,f in pairs(self.flames) do
+    f:update(dt)
+  end
+
   self.ball:update(dt)
 
   self.world:update(dt)
@@ -115,6 +146,9 @@ function game:draw (args)
   self.map:draw(self.map.tx,self.map.ty,self.cam.scale,self.cam.scale)
   for _,c in pairs(self.map.collectables) do
     c:draw()
+  end
+  for _,f in pairs(self.flames) do
+    f:draw()
   end
   --self.map:draw()
   --self.map:bump_draw()

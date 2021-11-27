@@ -19,3 +19,5 @@ ITEM["speed"] = {}
 ITEM["speed"].height = 7
 ITEM["speed"].width = 8
 ITEM["speed"].sound = love.audio.newSource("sfx/speed.wav", "static")
+
+NORMAL_FACTOR = 1.8
