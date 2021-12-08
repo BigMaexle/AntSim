@@ -12,10 +12,7 @@ function ball:init (game,x,y)
   self.w = self.image._jsonData.frames[1].spriteSourceSize.w
   self.h = self.image._jsonData.frames[1].spriteSourceSize.h
 
-  self.body = love.physics.newBody (self.game.world,self.x,self.y,"dynamic")
-  self.body:setAngle(0)
-  self.shape = love.physics.newCircleShape(4)
-  self.fixture = love.physics.newFixture(self.body,self.shape)
+  self.game.world:add(self,self.x,self.y,self.w,self.h)
 
   self.ready_to_shoot = true
 
@@ -29,6 +26,7 @@ function ball:init (game,x,y)
   self.states = {
     free = require "src/classes/ballstate/free",
     aiming = require "src/classes/ballstate/aiming",
+    debug = require "src/classes/ballstate/debug"
   }
   self.states["aiming"]:init()
 
@@ -81,6 +79,11 @@ function ball:update (dt)
 
   self.states[self.current_state]:update(self,dt)
   self.psystem:update(dt)
+
+  --Check if to deep
+  if self.y > self.game.max_y then
+    self.game:restart()
+  end
 
 end
 

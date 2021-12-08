@@ -18,10 +18,15 @@ end
 function Flame:update (dt)
   self.ps:update(dt)
 
+  self.pos_x = self.x - self.game.map.tx/1.435
+  self.pos_y = self.y - self.game.map.ty/1.435
+  --self.ps:setPosition( self.pos_x+10,self.pos_y-13)
+
 end
 
 function Flame:draw (args)
-  love.graphics.draw(self.ps)
+  --love.graphics.circle("fill", self.pos_x+10,self.pos_y-13,1)
+  love.graphics.draw(self.ps,-self.game.map.tx/1.435,-self.game.map.ty/1.435)
 end
 
 return Flame

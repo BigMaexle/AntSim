@@ -20,10 +20,7 @@ function coll:init (game,item)
   --move it 1 Tile higher (TILED WORKAROUND)
   self.y = self.y - self.h
 
-  self.body = love.physics.newBody (self.game.world,self.x,self.y,"dynamic")
-  self.body:setAngle(0)
-  self.shape = love.physics.newRectangleShape(2,2)
-  self.fixture = love.physics.newFixture(self.body,self.shape)
+  self.game.world:add(self,self.x,self.y,self.w,self.h)
 
   self.anim_y = self.y
 
@@ -70,6 +67,8 @@ function coll:collect (args)
     local norm_dir = self.game.ball.dr / (self.game.ball.dr:len())
     self.game.ball.dr = self.game.ball.dr + (norm_dir * SPEED_BOOST)
     self.game:applyshake()
+  elseif self.type == "tea" then
+    self.game.time_left = 1
   end
 
 
