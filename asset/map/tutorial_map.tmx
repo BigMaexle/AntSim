@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="64">
+ <editorsettings>
+  <export target="tutorial_map.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="map_tilesheet.tsx"/>
+ <tileset firstgid="257" source="collectable.tsx"/>
+ <tileset firstgid="264" source="flag.tsx"/>
+ <tileset firstgid="269" source="flame.tsx"/>
+ <layer id="1" name="level_base1" width="20" height="20">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+38,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,39,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+53,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,36,
+54,35,4,4,4,4,4,4,4,34,37,35,4,4,4,4,4,4,4,36,
+1,54,35,4,4,4,4,4,4,36,1,53,4,4,4,4,4,4,34,55,
+1,1,53,4,4,4,4,4,4,36,1,53,4,4,4,4,4,34,55,1,
+1,1,54,37,35,4,4,4,4,36,1,53,4,4,4,4,4,36,1,1,
+1,1,1,1,54,98,98,98,98,55,1,54,98,98,3,98,98,55,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,38
+</data>
+ </layer>
+ <objectgroup id="4" name="deco">
+  <object id="48" gid="268" x="240" y="288" width="16" height="20"/>
+  <object id="49" gid="269" x="256" y="256" width="16" height="16"/>
+  <object id="50" gid="269" x="192" y="256" width="16" height="16"/>
+  <object id="51" gid="269" x="128" y="256" width="16" height="16"/>
+  <object id="52" gid="269" x="80" y="256" width="16" height="16"/>
+  <object id="53" gid="269" x="48" y="160" width="16" height="16"/>
+  <object id="54" gid="269" x="112" y="160" width="16" height="16"/>
+  <object id="59" gid="269" x="192" y="160" width="16" height="16"/>
+  <object id="60" gid="269" x="256" y="160" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="3" name="collectable">
+  <object id="20" gid="257" x="224" y="288" width="16" height="16"/>
+  <object id="21" gid="257" x="224" y="272" width="16" height="16"/>
+  <object id="22" gid="257" x="224" y="256" width="16" height="16"/>
+  <object id="23" gid="257" x="288" y="240" width="16" height="16"/>
+  <object id="24" gid="257" x="288" y="224" width="16" height="16"/>
+  <object id="25" gid="257" x="288" y="208" width="16" height="16"/>
+  <object id="26" gid="257" x="272" y="256" width="16" height="16"/>
+  <object id="27" gid="257" x="272" y="240" width="16" height="16"/>
+  <object id="28" gid="257" x="272" y="224" width="16" height="16"/>
+  <object id="29" gid="257" x="32" y="240" width="16" height="16"/>
+  <object id="30" gid="257" x="32" y="224" width="16" height="16"/>
+  <object id="31" gid="257" x="32" y="208" width="16" height="16"/>
+  <object id="32" gid="257" x="16" y="224" width="16" height="16"/>
+  <object id="33" gid="257" x="16" y="208" width="16" height="16"/>
+  <object id="34" gid="257" x="16" y="192" width="16" height="16"/>
+  <object id="35" gid="259" x="160" y="192" width="16" height="16"/>
+  <object id="62" gid="263" x="96" y="192" width="16" height="16"/>
+  <object id="63" gid="263" x="224" y="192" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="2" name="base">
+  <object id="61" name="player_spawn" x="112" y="272" visible="0">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

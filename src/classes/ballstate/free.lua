@@ -6,20 +6,20 @@ end
 
 function free:update(ball,dt)
 
-  local prev_r = ball.r
+  --local prev_r = ball.r
 
   ball:applyGravity(dt)
 
-  local col,len = ball:move()
-
-  ball.game.cols = len
+  local col,len = ball:move(dt)
 
 
-  --ball.dr = (ball.r-prev_r)
+  ball.dr = ball.dr *  math.pow(drag(ball.dr:len2()),dt)
 
   for _,c in pairs(col) do
 
-    if c.other.type == "coin" or c.other.type == "speed" then
+    if c.other.type == "coin" or
+      c.other.type == "speed" or
+      c.other.type == "tea" then
       c.other:collect()
     end
 
@@ -31,21 +31,26 @@ function free:update(ball,dt)
     end
 
     if c.other.properties.filter == 'bounce' then
-      if ball.dr:len2() > 1 and not ball.on_ground then
-        ball.bounce_sound:play()
-        if c.other.properties.particle ~= nil then ball.psystem:emit(c,8,ball.dr) end
-      end
       if c.normal.y == -1 then
-        ball.dr.y = ball.dr.y *(-1)
-        ball.dr.y = ball.dr.y *c.other.properties.bounce_res
-        ball.dr.x = ball.dr.x *c.other.properties.roll_res
-        if math.abs(ball.dr.y) < 0.2 then
+
+
+        if math.abs(ball.dr.y) < 25 then
           ball.dr.y = 0
           ball.on_ground  = true
           self.roll_res = c.other.properties.roll_res
           self.roll_ground = c.other.properties.particle
+        else
+          ball.dr.y = ball.dr.y *(-1)
+          ball.dr.y = ball.dr.y *c.other.properties.bounce_res
         end
+
       end
+      if ball.dr:len2() > 0.1 and not ball.on_ground then
+        ball.bounce_sound:play()
+        if c.other.properties.particle ~= nil then ball.psystem:emit(c,8,ball.dr) end
+        ball.dr.x = ball.dr.x *c.other.properties.bounce_res
+      end
+
 
       if c.normal.y == 1 then
         ball.dr.y = ball.dr.y *(-1)
@@ -54,7 +59,7 @@ function free:update(ball,dt)
 
       if c.normal.x ~= 0 then
         ball.dr.x = ball.dr.x *(-1)
-        ball.dr.x = ball.dr.x *c.other.properties.bounce_res
+        --ball.dr.x = ball.dr.x *c.other.properties.bounce_res
       end
     end
 
@@ -73,11 +78,10 @@ function free:update(ball,dt)
     --ball.psystem.ps:setEmissionRate(0)
   end
 
-  if ball.dr:len2 () < 0.1 and ball.on_ground then
+  if ball.dr:len2 () < 5 and ball.on_ground then
     --self.dr = vec(0,0)
     ball.ready_to_shoot = true
   end
-
 
 end
 

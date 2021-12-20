@@ -17,7 +17,9 @@ end
 function ent:draw (x,y)
   local x = x or self.x
   local y = y or self.y
-  self.image:draw(x,y)
+  local rot = nil
+  local scale = self.scale or 1
+  self.image:draw(x+self.w/2,y+self.h/2,rot,self.scale,self.scale,self.w/2,self.h/2)
 end
 
 function ent:applyGravity (dt)
@@ -26,16 +28,24 @@ function ent:applyGravity (dt)
 
 end
 
-function ent:move ()
-  local goal = self.r + self.dr
-  local goalX = goal.x
-  local goalY = goal.y
-  local actualX, actualY, cols, len = self.game.world:move(self, goalX, goalY,self.playerFilter)
-  self.r = vec(actualX,actualY)
-  self.x = actualX
-  self.y = actualY
+function ent:move (dt)
 
-  return cols,len
+  local playerFilter = function(item, other)
+    return other.properties.filter
+  end
+
+  local goal = self.r + self.dr*dt
+
+
+  local actX,actY,col,len = self.game.world:move(self,goal.x,goal.y,playerFilter)
+
+  self.r = vec(actX,actY)
+  self.x = actX
+  self.y = actY
+
+  return col,len
+
+
 
 end
 

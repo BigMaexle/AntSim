@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.5" tiledversion="1.6.0" name="map_tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
+<tileset version="1.5" tiledversion="1.7.2" name="map_tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
  <editorsettings>
   <export target="map_tilesheet..tsx" format="tsx"/>
  </editorsettings>
@@ -19,7 +19,7 @@
    <property name="hole" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="3">
-   <object id="3" x="0" y="-0.0913677" width="2" height="11">
+   <object id="3" x="0" y="2.03363" width="2" height="8.875">
     <properties>
      <property name="bounce_res" type="float" value="0.8"/>
      <property name="collidable" type="bool" value="true"/>
@@ -44,7 +44,7 @@
      <property name="hole" type="bool" value="true"/>
     </properties>
    </object>
-   <object id="7" x="14" y="0" width="2" height="11">
+   <object id="7" x="14" y="1.9375" width="2" height="9.0625">
     <properties>
      <property name="bounce_res" type="float" value="0.8"/>
      <property name="collidable" type="bool" value="true"/>
@@ -207,51 +207,51 @@
  </tile>
  <tile id="98" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.2"/>
+   <property name="bounce_res" type="float" value="0.5"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
    <property name="particle" value="grass"/>
-   <property name="roll_res" type="float" value="0.3"/>
+   <property name="roll_res" type="float" value="0.4"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
  <tile id="99" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.2"/>
+   <property name="bounce_res" type="float" value="0.5"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
    <property name="particle" value="grass"/>
-   <property name="roll_res" type="float" value="0.3"/>
+   <property name="roll_res" type="float" value="0.4"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
  <tile id="100" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.2"/>
+   <property name="bounce_res" type="float" value="0.5"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
    <property name="particle" value="grass"/>
-   <property name="roll_res" type="float" value="0.3"/>
+   <property name="roll_res" type="float" value="0.4"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
  <tile id="101" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.2"/>
+   <property name="bounce_res" type="float" value="0.5"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
    <property name="particle" value="grass"/>
-   <property name="roll_res" type="float" value="0.3"/>
+   <property name="roll_res" type="float" value="0.4"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>
  <tile id="102" type="wall">
   <properties>
-   <property name="bounce_res" type="float" value="0.2"/>
+   <property name="bounce_res" type="float" value="0.5"/>
    <property name="collidable" type="bool" value="true"/>
    <property name="filter" value="bounce"/>
    <property name="particle" value="grass"/>
-   <property name="roll_res" type="float" value="0.3"/>
+   <property name="roll_res" type="float" value="0.4"/>
    <property name="type" value="grass"/>
   </properties>
  </tile>

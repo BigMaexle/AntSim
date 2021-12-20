@@ -17,6 +17,11 @@ function won:update (dt)
 
 end
 
+function won:keypressed()
+  print (self.game.current_level)
+  gs.switch(game,self.game.current_level+1)
+end
+
 function won:draw ()
   self.game:draw()
 

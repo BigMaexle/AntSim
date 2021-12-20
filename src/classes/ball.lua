@@ -11,7 +11,8 @@ function ball:init (game,x,y)
 
   self.w = self.image._jsonData.frames[1].spriteSourceSize.w
   self.h = self.image._jsonData.frames[1].spriteSourceSize.h
-  self.game.world:add(self,x,y,self.w,self.h)
+
+  self.game.world:add(self,self.x,self.y,self.w,self.h)
 
   self.ready_to_shoot = true
 
@@ -25,6 +26,7 @@ function ball:init (game,x,y)
   self.states = {
     free = require "src/classes/ballstate/free",
     aiming = require "src/classes/ballstate/aiming",
+    debug = require "src/classes/ballstate/debug"
   }
   self.states["aiming"]:init()
 
@@ -77,6 +79,11 @@ function ball:update (dt)
 
   self.states[self.current_state]:update(self,dt)
   self.psystem:update(dt)
+
+  --Check if to deep
+  if self.y > self.game.max_y then
+    self.game:restart()
+  end
 
 end
 

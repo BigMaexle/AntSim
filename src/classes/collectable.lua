@@ -33,7 +33,7 @@ function coll:update (dt)
 
   if self.collected == false then
     self.anim_y = self.y + 3* self.game.sin
-    self.game.world:update(self,self.x,self.anim_y)
+    --self.game.world:update(self,self.x,self.anim_y)
   end
 
   if self.collected then
@@ -67,6 +67,8 @@ function coll:collect (args)
     local norm_dir = self.game.ball.dr / (self.game.ball.dr:len())
     self.game.ball.dr = self.game.ball.dr + (norm_dir * SPEED_BOOST)
     self.game:applyshake()
+  elseif self.type == "tea" then
+    self.game.time_left = 1
   end
 
 

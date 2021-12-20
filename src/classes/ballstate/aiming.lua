@@ -3,12 +3,13 @@ local aiming = {}
 function aiming:init (args)
   self.image = love.graphics.newImage("asset/power.png")
   self.pwr_qds = {}
+  local w,h = self.image:getDimensions()
 
   for i=0,15 do
-    self.pwr_qds[i] = love.graphics.newQuad(1, 1+(15-i), 10, 15-(15-i), 32,16)
+    self.pwr_qds[i] = love.graphics.newQuad(1, 1+(15-i), 10, 15-(15-i), w,h)
   end
 
-  self.pwr_outline = love.graphics.newQuad(16, 0  , 10, 16, 32, 16)
+  self.pwr_outline = love.graphics.newQuad(16, 0  , 10, 16, w,h)
 
   self.timer = Timer.new()
 
@@ -61,8 +62,6 @@ function aiming:draw (ball)
 
   local dir = vec.fromPolar(ball.angle,10)
   love.graphics.line(mid_x+dir.x,mid_y+dir.y,mid_x+2*dir.x,mid_y+2*dir.y)
-
-  love.graphics.print(math.floor(ball.strength*10)/10,mid_x+20,mid_y-10)
 
   love.graphics.draw(self.image,self.pwr_outline, mid_x-20, mid_y-10)
   love.graphics.draw(self.image,self.pwr_qds[self.str], mid_x-19, mid_y-9 + (15-self.str) )

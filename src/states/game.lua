@@ -2,14 +2,16 @@ local game = {}
 
 function game:init (args)
 
-  --Push:setupScreen (VIR_W,VIR_H,WIN_W,WIN_H)
+  Push:setupScreen (VIR_W,VIR_H,WIN_W,WIN_H)
 
   self.cam = cam(0,0)
   self.cam.scale = 3
   self.cam.r = 0
   self.shaking = false
 
-  self:loadlevel("asset/map/map2.lua")
+  self.current_level = 2
+
+
 
  Timer.every(0.05,function ()
    self.sin = math.sin(self.time*7)
@@ -19,11 +21,20 @@ end
 
 function game:loadlevel (filename)
 
+  self.time_left = 1
+
   self.world = bump.newWorld(32)
   self.map = 	sti(filename,{"bump"})
-
+  self.map:removeLayer("background") --background muss weg
+  self.map:removeLayer("deco_back")
+  self.map.tx = 0
+  self.map.ty = 0
 
   self.map:bump_init(self.world)
+
+  self.max_y = #self.map.layers.level_base1.data * 16
+
+
 
   --find hole
   for x,i in pairs(self.map.layers.level_base1.data) do
@@ -54,36 +65,70 @@ function game:loadlevel (filename)
   end
   self.map:removeLayer("collectable")
 
+
+  --secondmap
+
+
+  --self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
   ---particle emmission for flames
-  self.flames = {}
-  for k,o in pairs(self.map.layers.deco.objects) do
-    if o.type == "flame" then
-      self.flames[k] = Flame(self,o.x,o.y)
-    end
-  end
+
 
   self.world:add(self.hole,self.hole.x,self.hole.y,self.hole.w,self.hole.h)
 
  --dbt:print_r(self.map.layers.base.objects)
  for _,o in pairs (self.map.layers.base.objects) do
-  if o.name == "player_spawn" then self.ball = Ball(self,o.x,o.y) end
+  if o.name == "player_spawn" then
+    self.ball = Ball(self,o.x,o.y)
+  end
  end
+
+ --background laden
+self.background = sti(filename)
+for _,l in pairs(self.background.layers) do
+  if l.name ~= "background" and l.name ~= "deco_back" then
+    self.background:removeLayer(l.name)
+  end
+end
+
+self.flames = {}
+for k,o in pairs(self.background.layers.deco_back.objects) do
+  if o.type == "flame" then
+    self.flames[k] = Flame(self,o.x,o.y)
+  end
+end
 
  self.score = 0
  self.time = 0
  self.sin = 0
 end
 
-function game:enter (args)
+function game:enter (game,level_no)
+
+  self.current_level =  level_no or self.current_level
+
+  self:loadlevel("asset/map/"..LEVELS[self.current_level]..".lua")
+
+  self.ui = UI(self)
 
 
+end
+
+function game:restart ()
+  self:enter(game,self.current_level)
 end
 
 function game:keypressed(key, scancode, isrepeat)
 
   if key == "r" then
-    for _,o in pairs (self.map.layers.base.objects) do
-     if o.name == "player_spawn" then self.ball = Ball(self,o.x,o.y) end
+    self:restart()
+  end
+
+  if key == "d" then
+    print("debug")
+    if self.ball.current_state == "debug" then
+      self.ball.current_state = "free"
+    else
+      self.ball.current_state = "debug"
     end
   end
 
@@ -101,6 +146,7 @@ end
 function game:update (dt)
 
   self.map:update(dt)
+  self.background:update(dt)
 
   self.time = self.time + dt
   if self.time > 2*math.pi then
@@ -119,8 +165,12 @@ function game:update (dt)
   end
 
   self.ball:update(dt)
+  self.ui:update(dt)
+
+  --self.world:update(dt)
 
   self:camera_update(self.cam,dt)
+
 
 end
 
@@ -129,23 +179,29 @@ end
 function game:draw (args)
   self.cam:attach()
 
-
-  self.map:draw(self.map.tx,self.map.ty,self.cam.scale,self.cam.scale)
-  for _,c in pairs(self.map.collectables) do
-    c:draw()
-  end
+  self.background:draw(self.map.tx*0.3,self.map.ty*0.3,self.cam.scale,self.cam.scale)
   for _,f in pairs(self.flames) do
     f:draw()
   end
+
+  for _,c in pairs(self.map.collectables) do
+    c:draw()
+  end
+  self.map:draw(self.map.tx,self.map.ty,self.cam.scale,self.cam.scale)
+
+
   --self.map:draw()
   --self.map:bump_draw()
 
   self.ball:draw()
-  --love.graphics.rectangle("fill", 1, 1, 10, 10,4,4)
-
-  --love.graphics.rectangle("line",self.hole.x,self.hole.y,self.hole.w,self.hole.h)
 
   self.cam:detach()
+
+  Push:start()
+
+  self.ui:draw(self.time_left)
+
+  Push:finish()
 
   ---DEBUG----
     local width, height, flags = love.window.getMode( )
@@ -153,8 +209,7 @@ function game:draw (args)
   --love.graphics.print(self.cam.x -width/self.cam.scale/2,20,10)
   love.graphics.print(self.cam.y,0,20)
   love.graphics.print(self.ball.frame_duration,0,30)
-  love.graphics.print(self.score .. "   On ground?:  " .. tostring(self.ball.on_ground),0,40 )
-  love.graphics.print(self.cols,0,50)
+  love.graphics.print(self.ball.dr.y,0,40)
 
 
 end
